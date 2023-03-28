@@ -1,0 +1,29 @@
+.portfolio__projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    min-height: 100vh !important;
+}
+
+.portfolio__projects h2 {
+    font-size: var(--fz-heading);
+    font-weight: 600;
+}
+
+.portfolio_projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.portfolio_projects-container > a {
+    align-self: center;
+    font-size: var(--fz-lg);
+    color: var(--cyan);
+    transition: all 0.3s ease-in-out;
+}
+.portfolio_projects-container > a:hover {
+    color: var(--purpel--color);
+    transform: scale(1.2);
+}

@@ -1,13 +1,137 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&display=swap');
+
+
+:root {
+  --purpel--color: #5756cf;
+  --bg--color: #1f1f1f;
+  --text--color: #a8b2d1;
+  --nav-bg--color: #0a0a0a;
+  --cyan : #82EEE1;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+
+  --font--sans: "Calibre", "Inter", "San Francisco", "SF Pro Text",
+    -apple-system, system-ui, sans-serif;
+  --font--mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  --font--zh: 'Noto Serif SC', serif;
+  --fz-xxs: 12px;
+  --fz-xs: 13px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-xl: 20px;
+  --fz-xxl: 22px;
+  --fz-heading: 32px;
+}
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  color: var(--text--color);
+  font-family: var(--font--sans);
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: var(--bg--color);
+}
+
+img {
+  object-fit: cover;
+}
+a {
+  text-decoration: none;
+}
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+li {
+  cursor: pointer;
+}
+li::marker {
+  content: "→ ";
+  color: var(--purpel--color);
+}
+svg {
+    cursor: pointer;
+}
+
+.gradient-text {
+    /* ff 3.6+ */
+    background:-moz-linear-gradient(302deg, #82EEE1 0%, #5756CF 100%); 
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-linear-gradient(302deg, #82EEE1 0%, #5756CF 100%);
+
+    /* opera 11.10+ */
+    background:-o-linear-gradient(302deg, #82EEE1 0%, #5756CF 100%);
+
+    /* ie 6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82EEE1', endColorstr='#5756CF', GradientType=0 );
+
+    /* ie 10+ */
+    background:-ms-linear-gradient(302deg, #82EEE1 0%, #5756CF 100%);
+
+    /* global 94%+ browsers support */
+    background:linear-gradient(302deg, #82EEE1 0%, #5756CF 100%);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.scale-up-tr {
+	-webkit-animation: scale-up-tr 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-tr 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes scale-up-tr {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+  }
+  @keyframes scale-up-tr {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+  }
+
+.section-padding {
+  padding: 1rem 6rem;
+}
+.section-margin {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 850px) {
+    .section-padding {
+        padding: 0.8rem 4rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section-padding {
+        padding: 0.5rem 2rem;
+    }
 }
